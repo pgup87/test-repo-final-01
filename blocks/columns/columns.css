@@ -1,33 +1,21 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
-.columns img {
+.columns-img-col img {
   width: 100%;
+  height: auto;
 }
 
-.columns > div > div {
-  order: 1;
-}
-
-.columns > div > .columns-img-col {
-  order: 0;
-}
-
-.columns > div > .columns-img-col img {
-  display: block;
-}
-
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
+    flex-direction: row;
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
   }
-
   .columns > div > div {
     flex: 1;
-    order: unset;
   }
 }
